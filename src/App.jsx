@@ -6,6 +6,7 @@ function App() {
     fetch("https://rickandmortyapi.com/api/character")
     .then((res) => res.json())
     .then((data) => setChar(data.results))
+    .catch((error) => console.log('Fetch Data Error : ', error.message))
   },[])
 
   return (
